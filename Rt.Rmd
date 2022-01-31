@@ -1,0 +1,35 @@
+---
+title: "Rt"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is a glorious package which includes a fantastic function, really, you'll love it! The make_art function is awesome- it accepts one arguement -- of the integer kind. It then uses the integer as a seed to create random beautiful, museum-worthy, computer-generated, future-breaking - Rt.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r, eval =TRUE}
+
+install.packages("aRtsy")
+library(aRtsy)
+
+make_art <- function(seed){
+  set.seed(seed)
+  canvas_ant(colors = colorPalette('house'))
+}
+```
+
+## The following is an example of using the make_art function with seed 69:
+
+```{r, eval =TRUE, echo= FALSE}
+
+make_art(69)
+
+```
